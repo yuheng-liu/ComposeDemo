@@ -56,3 +56,12 @@ fun ComposeDemoTheme(
         content = content
     )
 }
+
+@Composable
+fun MeditationUITheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+    MaterialTheme(
+        typography = Typography,
+        shapes = Shapes,
+        content = content
+    )
+}
