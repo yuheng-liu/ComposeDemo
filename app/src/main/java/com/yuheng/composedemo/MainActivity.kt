@@ -91,7 +91,9 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
+import com.yuheng.composedemo.ui.HomeScreen
 import com.yuheng.composedemo.ui.theme.ComposeDemoTheme
+import com.yuheng.composedemo.ui.theme.MeditationUITheme
 import kotlinx.coroutines.launch
 import kotlin.math.PI
 import kotlin.math.atan
@@ -102,7 +104,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+            MeditationUITheme {
+                HomeScreen()
+            }
         }
     }
 }
