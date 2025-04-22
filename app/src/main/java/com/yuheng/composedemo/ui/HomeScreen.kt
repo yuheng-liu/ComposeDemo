@@ -26,16 +26,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -338,8 +336,8 @@ fun FeatureItem(
             .clip(RoundedCornerShape(10.dp))
             .background(feature.darkColor)
     ) {
-        val width = constraints.maxWidth
-        val height = constraints.maxHeight
+        val width = this.maxWidth.value
+        val height = this.maxHeight.value
 
         // Medium colored path
         val mediumColoredPoint1 = Offset(0f, height * 0.3f)
